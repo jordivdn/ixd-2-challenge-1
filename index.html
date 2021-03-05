@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta description="Space X spaceship dashboard">
+      <title>SpaceX Dashboard</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link type="text/css" rel="stylesheet" href="css/style.css" />
+      <link type="text/css" rel="stylesheet" href="css/Chart.css" />
+      <script src="dist/gauge.min.js"></script>
+      <script src="js/Chart.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img class="logo" src="images/logo.png" alt="logo" />
+                <p>Vladimir Cosmoski</p>
+                <img class="header-pf" src="images/vlad.jpg" alt="Profile Picture" />
+            </nav>
+        </header>
+        <main>
+           <h1>Falcon 10 Dashboard</h1>
+           <p>Estimated time to Mars: <span style="color:#BB86FC;font-weight:bold">7</span> months and <span style="color:#BB86FC;font-weight:bold">2</span> weeks.</p>
+          <!--Datavisualisaties-->
+          <!--Thrust visual-->
+           <section class="dataVisuals">
+                <section class="thrust">
+                  <h2>Thrust</h2>
+                  <div id="thrustVisual" class="gauge-container1"></div>
+                  <p class="thrustperc">Percentage</p>
+                  <p class="force">845 kN / 190.000 lbf</p>
+                </section>
+          <!--Minerals visual-->
+                <section class="minerals">
+                  <h2>Meteorite minerals</h2>
+                  <p>Collected</p>
+                  <div class="mineralBG">
+                    <div id="minMeter" class="minMeterClass">
+                    </div>
+                  </div>
+                </section>
+          <!--Distance visual-->    
+                <section class="distance">
+                  <h2>Distance</h2>
+                  <canvas id="distanceLijndiagram"></canvas>
+                </section>   
+          </section>            
+        </main>
+    </body>
+  <script src="js/gauge.js"></script>
+  <script src="js/distanceLijndiagram.js"></script>
+</html>

@@ -1,0 +1,402 @@
+@font-face {
+    font-family: d-din;
+    src: url(fonts/D-DIN.otf);
+}
+
+@font-face {
+    font-family: d-din-Bold;
+    src: url(fonts/D-DIN-Bold.otf);
+}
+
+* {
+    margin: 0px;
+}
+body{
+    background-color: #202020;
+	color: #707070;
+	font-family: d-din;
+	font-size: 10px;
+}
+h2{
+    font-family: d-din;
+    font-size: 14pt;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+nav{
+    background-color: #181818;
+    min-height: 100px;
+}
+nav > p {
+    display: none;
+}
+
+nav > a{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 40%;
+    color: white;
+}
+
+.header-pf {
+    border-radius: 50%;
+    float: left;
+    width: 75px;
+    margin-left: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    margin-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 50px;
+}
+
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+h1 {
+    font-size: 20pt;
+    font-family: d-din-Bold;
+    color: rgba(255, 255, 255, 0.87);
+    text-align: center;
+}
+
+p{
+    font-size: 11pt;
+    font-family: d-din;
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 15px;
+}
+
+.thrust, .minerals, .distance{
+    background-color: #181818;
+    margin-top: 50px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.minerals, .distance{
+    margin-top: 10%;
+}
+
+.minerals > p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: D-DIN;
+    color: rgba(255, 255, 255, 0.60);
+}
+
+.dataVisuals {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "thrust" 
+    "minerals"           
+    "distance";
+    grid-template-columns: 100%;
+    grid-row-gap: 10px;
+}
+
+.thrust {
+    grid-area: thrust;
+    width: 88%;
+    padding: 6%;
+    margin-top: 50px;
+}
+
+.minerals {
+    grid-area: minerals;
+    width: 88%;
+    padding: 6%;
+    margin-top: 50px;
+    justify-self: end;
+}
+
+.distance {
+    grid-area: distance;
+    width: 88%;
+    padding: 6%;
+    margin-top: 30px;
+}
+
+#afstandsGrafiek {
+    width: 300;
+}
+
+.mineralBG {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.mineralBG > .gauge-container {
+  margin: 0;
+}
+
+.minMeterClass {
+}
+
+.minMeterClass > .gauge > .dial {
+  stroke: #383838;
+  stroke-width: 6;
+}
+
+.minMeterClass > .gauge > .value {
+  stroke: orange;
+  stroke-dasharray: none;
+  stroke-width: 9;
+}
+
+.minMeterClass > .gauge > .value-text {
+  fill: #ccc;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.gauge-container {
+  width: 100%;
+  height: 400px;
+}
+
+.gauge-container > .gauge > .dial, .gauge-container1 > .gauge > .dial {
+  stroke: #383838;
+  stroke-width: 2;
+  fill: rgba(0,0,0,0);
+}
+
+.gauge-container > .gauge > .value {
+  stroke: #383838;
+  stroke-width: 2;
+  fill: rgba(0,0,0,0);
+}
+
+.gauge-container1 > .gauge > .value{
+    stroke: #BB86FC;
+}
+
+.gauge-container > .gauge > .value-text {
+  fill: rgb(187, 134, 252);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.gauge-tekst {
+    text-align: center;
+    font-weight: bold;
+}
+
+b{
+    font-weight: normal;
+    font-size: 10pt;
+}
+
+.thrustperc {
+    text-align: center;
+    margin-top: -170px;
+    font-weight: bold;
+}
+
+.force {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16pt;
+    margin-top: 180px;
+    color: white;
+}
+
+.minerals > p{
+    text-align: left;
+    font-weight: normal;
+    font-family: D-DIN;
+    color: rgba(255, 255, 255, 0.60);
+}
+
+@media only screen and (max-width: 899px) and (min-width: 550px) {
+    nav > a{
+        margin-left: 50%;
+}
+
+    .thrust{
+        grid-area: thrust;
+        width: 85%;
+        padding: 6%;
+        margin-top: 50px;
+        border-radius: 5px;
+    }
+    .minerals {
+        grid-area: minerals;
+        width: 85%;
+        padding: 6%;
+        margin-top: 50px;
+        border-radius: 5px;
+        justify-self: end;
+    }
+    .distance {
+        grid-area: distance;
+        width: 88%;
+        padding: 6%;
+        margin-top: 30px;
+        border-radius: 5px;
+    }
+
+    .dataVisuals {
+        display: grid;
+        width: 100%;
+        grid-template-areas: 
+            "thrust minerals"
+            "distance distance";
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 10px;
+    }
+    .thrustperc{
+        margin-top: -100px;
+    }
+    .force{
+        margin-top: 70px;
+    }
+}  
+    
+@media only screen and (max-width: 1313px) and (min-width: 900px) {
+    main {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+    }
+    main > p {
+        margin-bottom: 20px;
+    }
+    nav > a{
+        display: none;
+    }
+    nav > p {
+        display: inherit;
+        position: absolute;
+        font-weight: bold;
+        color: white;
+        margin-top: -45px; 
+        margin-left: 25%;    
+    }
+    .thrust {
+        grid-area: thrust;
+        padding: 6%;
+        width: 86%;
+        border-radius: 5px;
+    }
+    .minerals {
+        grid-area: minerals;
+        padding: 6%;
+        width: 86%;
+        margin-top: 25px;
+        max-height: 200px;
+        border-radius: 5px;
+    }
+    .distance {
+        grid-area: distance;
+        width: 88%;
+        padding: 5%;
+        margin-top: 50px;
+        justify-self: end;
+        border-radius: 5px;
+    }
+
+    .distance > h2 {
+        margin-top: -20px;
+    }
+    .dataVisuals {
+        display: grid;
+        width: 100%;
+        grid-template-areas: 
+            "thrust minerals"
+            "distance distance";
+        grid-template-columns: 50% 50% 50% 50%;
+        grid-row-gap: 10px;
+        justify-content: space-between;
+    }
+    footer {
+        margin-top: 70px;
+    }
+    #minMeter {
+        height: 300px;
+    }
+    .minerals > p {
+        margin-top: 0px;
+    }
+    .thrustperc {
+        margin-top: -80px;
+    }
+    .force {
+        margin-top: 70px;
+    }
+
+}    
+
+@media only screen and (min-width: 1314px) {
+    main {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+    }
+    nav > a{
+        display: none;
+    }
+     nav > p {
+        display: inherit;
+        position: absolute;
+        font-weight: bold;
+        color: white;
+        margin-top: -40px; 
+        margin-left: 15%;    
+    }
+
+    .thrust {
+        grid-area: thrust;
+        width: 84%;
+        border-radius: 5px;
+        padding: 6%;
+        margin-top: 50px;
+    }
+    .minerals {
+        grid-area: minerals;
+        margin-bottom: 0px;
+        margin-top: 50px;
+        width: 84%;
+        border-radius: 5px;
+        padding: 6%;
+        justify-self: end;
+    }
+    .distance {
+        grid-area: distance;
+        margin-top: 50px;
+        margin-right: 0px;
+        width: 86%;
+        border-radius: 5px;
+        padding: 5%;
+        justify-self: end;
+    }
+
+    .dataVisuals {
+        display: grid; 
+        grid-template-areas: 
+            "thrust distance distance minerals ";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-row-gap: 10px;
+        justify-content: space-between;
+    }
+
+    .thrustperc {
+        margin-top: -110px;
+    }
+    .force {
+        margin-top: 80px;
+    }
